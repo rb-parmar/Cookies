@@ -1,0 +1,186 @@
+@import url(./reset.css);
+
+:root {
+  --app-dark-bg: #1a1d28;
+  --app-green: #33ab4e;
+  --app-purple: #833cff;
+  --app-orange: #ff833c;
+  --app-blue: #3c57ff;
+  --app-blue-hover: #364ee6;
+  --app-red: #ff3c57;
+  --app-red-hover: #ff2846;
+}
+
+body {
+  background-color: var(--app-dark-bg);
+}
+
+/*-----------------------------------------------------*/
+/* Container                                           */
+/*-----------------------------------------------------*/
+
+.container {
+  width: min(100% - 30px, 1080px);
+  margin: auto;
+}
+
+.text {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.text p {
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 0.2;
+  text-align: justify;
+  font-weight: 700;
+  margin: 0 50px;
+}
+
+.cookie {
+  color: var(--app-purple);
+  text-decoration: underline dotted;
+}
+
+.information {
+  color: var(--app-orange);
+  text-decoration: underline dotted;
+}
+
+.useful {
+  color: var(--app-green);
+  text-decoration: underline dotted;
+}
+
+/*-------------------Dialog-------------------------*/
+
+.dialog1, .dialog2 {
+  position: fixed;
+  top: 35%;
+  left: 40%;
+  height: 270px;
+  width: 270px;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 19px;
+}
+
+h3 {
+  font-size: 27px;
+  margin-bottom: 7px;
+}
+
+.dialog1 p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.accept {
+  height: 35px;
+  width: 100px;
+  background-color: var(--app-blue);
+  color: #fff;
+  border-radius: 30px;
+  margin-top: 25px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.accept:hover {
+  background-color: var(--app-blue-hover);
+}
+
+.settings {
+  height: 35px;
+  width: 100px;
+  border-radius: 30px;
+  margin-top: 25px;
+  margin-left: 5px;
+  background-color: #fff;
+  border: var(--app-blue) 0.5px solid;
+  color: var(--app-blue);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dialog2 {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 100%;
+  height: 25px;
+  display: inline-block;
+  font-size: 15px;
+}
+
+.switch + .switch {
+  margin-top: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  width: 50px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3.5px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--app-purple);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.save{
+height: 33px;
+width: 140px;
+background-color: var(--app-blue);
+color: #fff;
+border-radius: 30px;
+margin-top: 17px;
+transition: all 0.5s ease-in-out;
+cursor: pointer;
+font-size: 13px;
+}
+
+.save:hover {
+background-color: var(--app-blue-hover);
+}
